@@ -2,6 +2,8 @@ require 'net/http'
 
 class Converter
   class Currency
+    attr_accessor :value, :course, :currency
+
     def initialize(currency, amout)
       @value = (currency.to_f * amout).round(2)
       @course = currency.to_f
